@@ -11,9 +11,9 @@ import jakarta.persistence.Table
 data class Registration(
     @Id
     val id: String,
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     val meetId: String,
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     val runnerAuth0Id: String,
     @Column(nullable = false)
     val registeredAt: String,

@@ -10,7 +10,10 @@ data class Course(
     val id: UUID = UUID.randomUUID(),
     @Column(nullable = false)
     val name: String,
+    @Column(nullable = false)
     val distanceMeters: Int,
-    val mapImageUrl: String,
+    @Column(nullable = true)
+    val mapImageUrl: String? = null,
+    @Column(nullable = false)
     val startCoordinates: String,
 )

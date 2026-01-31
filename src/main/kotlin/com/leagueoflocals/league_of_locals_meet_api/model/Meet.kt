@@ -18,5 +18,6 @@ data class Meet(
     val status: String,
     @Column(nullable = false)
     val unitStandard: String,
-    val maxParticipants: Int,
+    @Column(nullable = true)
+    val maxParticipants: Int? = null,
 )
