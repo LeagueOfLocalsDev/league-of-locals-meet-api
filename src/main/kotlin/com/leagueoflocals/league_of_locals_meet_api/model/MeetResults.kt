@@ -4,19 +4,21 @@ import jakarta.persistence.*
 import java.util.*
 
 @Entity
-@Table(name = "meet")
-data class Meet(
+@Table(name = "meet_results")
+data class MeetResults(
     @Id
     val id: UUID = UUID.randomUUID(),
     @Column(nullable = false)
-    val organizerAuth0Id: String,
+    val meetId: String,
     @Column(nullable = false)
-    val name: String,
+    val runnerAuth0Id: String,
     @Column(nullable = false)
-    val scheduledTimeUtc: Date,
+    val runnerUsername: String,
+    val runnerHomeCity: String,
+    val runnerGender: String,
     @Column(nullable = false)
-    val status: String,
+    val finishTimeMs: Long,
+    val submissionLink: String,
     @Column(nullable = false)
-    val unitStandard: String,
-    val maxParticipants: Int,
+    val verificationStatus: String,
 )
