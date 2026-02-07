@@ -1,8 +1,9 @@
 plugins {
+    id("org.springframework.boot") version "3.3.4"
+    id("io.spring.dependency-management") version "1.1.7"
 	kotlin("jvm") version "2.2.21"
 	kotlin("plugin.spring") version "2.2.21"
-	id("org.springframework.boot") version "3.3.4"
-	id("io.spring.dependency-management") version "1.1.7"
+    kotlin("plugin.jpa") version "1.9.24"
 }
 
 group = "com.leagueoflocals"
@@ -22,6 +23,8 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    runtimeOnly("org.postgresql:postgresql")
 }
 
 kotlin {
