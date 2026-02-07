@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: league-of-locals-meet-api
-        image: ghcr.io/leagueoflocals/league-of-locals-meet-api:latest
+        image: ghcr.io/leagueoflocalsdev/league-of-locals-meet-api:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
