@@ -15,5 +15,5 @@ data class Course(
     @Column(nullable = true)
     val mapImageUrl: String? = null,
     @Column(nullable = false)
-    val startCoordinates: String,
+    val startCoordinates: Coordinates,
 )
