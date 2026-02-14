@@ -12,13 +12,10 @@ import java.util.UUID
 @RestController
 @RequestMapping("api/v1/meets")
 class MeetController (
-    private val courseService: CourseService
 ) {
 
-    @GetMapping("/{courseId}")
-    fun getUserProfile(@PathVariable courseId: UUID): ResponseEntity<Course> {
-        return courseService.getCourse(courseId)
-            ?.let { ResponseEntity.ok(it) }
-            ?: ResponseEntity.notFound().build()
+    @GetMapping("/{meetId}")
+    fun getUserProfile(@PathVariable meetId: UUID): ResponseEntity<String> {
+        return "Meet details for meet ID: $meetId".let { ResponseEntity.ok(it) }
     }
 }
