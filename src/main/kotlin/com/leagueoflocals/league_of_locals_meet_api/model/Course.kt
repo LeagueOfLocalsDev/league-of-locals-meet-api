@@ -14,6 +14,10 @@ data class Course(
     val distanceMeters: Int,
     @Column(nullable = true)
     val mapImageUrl: String? = null,
-    @Column(nullable = true)
-    val startCoordinates: Coordinates,
+    @Embedded
+    @AttributeOverrides(
+        AttributeOverride(name = "latitude", column = Column(name = "start_latitude")),
+        AttributeOverride(name = "longitude", column = Column(name = "start_longitude"))
+    )
+    var startCoordinates: Coordinates? = null
 )

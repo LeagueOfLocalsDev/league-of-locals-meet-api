@@ -37,5 +37,5 @@ data class CreateCourseRequest(
     val name: String,
     val distanceMeters: Int,
     val mapImageUrl: String?,
-    val startCoordinates: Coordinates,
+    val startCoordinates: Coordinates?,
 )
