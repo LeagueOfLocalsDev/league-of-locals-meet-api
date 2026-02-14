@@ -40,4 +40,4 @@ out/
 .kotlin
 
 # Ignore local development properties containing secrets
-/src/main/resources/application-dev.properties
+/src/main/resources/application-local.properties

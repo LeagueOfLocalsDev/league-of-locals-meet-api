@@ -14,6 +14,6 @@ data class Course(
     val distanceMeters: Int,
     @Column(nullable = true)
     val mapImageUrl: String? = null,
-    @Column(nullable = false)
+    @Column(nullable = true)
     val startCoordinates: Coordinates,
 )
