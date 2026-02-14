@@ -1,5 +1,6 @@
 package com.leagueoflocals.league_of_locals_meet_api.controller
 
+import com.leagueoflocals.league_of_locals_meet_api.model.Coordinates
 import com.leagueoflocals.league_of_locals_meet_api.model.Course
 import com.leagueoflocals.league_of_locals_meet_api.service.CourseService
 import jakarta.persistence.Column
@@ -36,5 +37,5 @@ data class CreateCourseRequest(
     val name: String,
     val distanceMeters: Int,
     val mapImageUrl: String?,
-    val startCoordinates: String,
+    val startCoordinates: Coordinates,
 )
