@@ -23,9 +23,6 @@ spec:
         envFrom:
           - secretRef:
               name: league-of-locals-meet-api-db-creds
-        env:
-        - name: SPRING_PROFILES_ACTIVE
-          value: "prod"
       imagePullSecrets:
       - name: ghcr-secret
 
