@@ -5,6 +5,7 @@ import com.leagueoflocals.league_of_locals_meet_api.model.MeetResults
 import org.springframework.data.jpa.repository.JpaRepository
 import java.util.*
 import jakarta.persistence.*
+import org.springframework.stereotype.Repository
 
-
+@Repository
 interface MeetResultsRepository : JpaRepository<MeetResults, UUID>
