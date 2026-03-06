@@ -24,7 +24,7 @@ class CourseServiceTest {
     @Test
     fun `when createCourse is called with valid data, it should save the course to the database`() {
         val request = CreateCourseRequest(
-            name = "Test Course",
+            name = "Epic Test Course",
             distanceMeters = 5000,
             mapImageUrl = "http://example.com/map.png",
             startCoordinates = null
