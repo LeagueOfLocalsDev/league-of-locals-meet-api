@@ -1,6 +1,7 @@
 package com.leagueoflocals.league_of_locals_meet_api.model
 
 import jakarta.persistence.*
+import java.time.OffsetDateTime
 import java.util.*
 
 @Entity
@@ -13,7 +14,7 @@ data class Meet(
     @Column(nullable = false)
     val name: String,
     @Column(nullable = false)
-    val scheduledTimeUtc: Date,
+    val scheduledTimeUtc: OffsetDateTime,
     @Column(nullable = false)
     val status: String,
     @Column(nullable = false)

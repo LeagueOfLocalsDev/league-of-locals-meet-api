@@ -4,6 +4,7 @@ import com.leagueoflocals.league_of_locals_meet_api.controller.CreateMeetRequest
 import com.leagueoflocals.league_of_locals_meet_api.model.Meet
 import com.leagueoflocals.league_of_locals_meet_api.repository.MeetRepository
 import org.springframework.stereotype.Service
+import java.time.OffsetDateTime
 
 @Service
 class MeetService(private val meetRepository: MeetRepository) {
@@ -12,7 +13,7 @@ class MeetService(private val meetRepository: MeetRepository) {
         val meet = Meet(
             organizerAuth0Id = organizerAuth0Id,
             name = request.name,
-            scheduledTimeUtc = java.sql.Timestamp.valueOf(request.scheduledTimeUtc),
+            scheduledTimeUtc = OffsetDateTime.parse(request.scheduledTimeUtc),
             status = request.status,
             unitStandard = request.unitStandard,
             maxParticipants = request.maxParticipants,
