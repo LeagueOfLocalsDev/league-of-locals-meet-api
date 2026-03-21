@@ -36,7 +36,7 @@ class MeetServiceTest {
         val saved = service.createMeet(request, organizerId)
 
         assertEquals(organizerId, saved.organizerAuth0Id)
-        assertEquals(request.name, "name")
+        assertEquals(request.name, saved.name)
         assertEquals(5, saved.maxParticipants)
         assertEquals(OffsetDateTime.parse(request.scheduledTimeUtc), saved.scheduledTimeUtc)
 
