@@ -3,6 +3,7 @@ package com.leagueoflocals.league_of_locals_meet_api.service
 import com.leagueoflocals.league_of_locals_meet_api.controller.CreateMeetRequest
 import com.leagueoflocals.league_of_locals_meet_api.model.Meet
 import com.leagueoflocals.league_of_locals_meet_api.repository.MeetRepository
+import com.leagueoflocals.league_of_locals_meet_api.repository.CourseRepository
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
@@ -18,7 +19,8 @@ import java.time.OffsetDateTime
 class MeetServiceTest {
 
     private val meetRepository: MeetRepository = mock()
-    private val service = MeetService(meetRepository)
+    private val courseRepository: CourseRepository = mock()
+    private val service = MeetService(meetRepository, courseRepository)
 
     @Test
     fun `createMeet saves organizerAuth0Id and parses scheduledTimeUtc`() {

@@ -30,4 +30,5 @@ data class CreateMeetRequest(
     val status: String,
     val unitStandard: String,
     val maxParticipants: Int? = null,
+    val courseId: java.util.UUID? = null
 )
